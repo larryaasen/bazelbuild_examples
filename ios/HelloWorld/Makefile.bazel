@@ -1,0 +1,12 @@
+# make -f Makefile.bazel build_app
+
+build_app:
+	bazel build --apple_platform_type=ios //:HelloWorld 
+
+install:
+	xcrun simctl install booted bazel-bin/HelloWorld_archive-root/Payload/HelloWorld.app
+
+launch:
+	xcrun simctl launch booted com.larryaasen.HelloWorld
+	
+run: build_app install launch
