@@ -1,0 +1,18 @@
+os: osx
+language: swift
+# macOS images: https://docs.travis-ci.com/user/reference/osx#macos-version
+osx_image: xcode11.3
+
+before_install:
+  - brew tap bazelbuild/tap
+  - brew tap-pin bazelbuild/tap
+  - brew install bazel
+
+script:
+  - cd ios/HelloWorld
+  - bazel version
+  - make -f Makefile.bazel build_app
+
+  - cd ../HelloWorld2
+  - bazel version
+  - make -f Makefile.bazel build_app

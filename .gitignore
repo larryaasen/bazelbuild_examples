@@ -1,5 +1,3 @@
 .DS_Store
-bazel-bin
-bazel-HelloWorld
-bazel-out
-bazel-testlogs
+bazel-*
+*.xcodeproj

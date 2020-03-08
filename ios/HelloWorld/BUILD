@@ -9,7 +9,6 @@ swift_library(
         "HelloWorld/SceneDelegate.swift",
     ],
     data = [
-        "HelloWorld/Base.lproj/LaunchScreen.storyboard",
         "HelloWorld/Assets.xcassets",
         "HelloWorld/Base.lproj/Main.storyboard",
     ]
@@ -24,6 +23,7 @@ ios_application(
         "ipad",
     ],
     infoplists = ["HelloWorld/Info.plist"],
-    minimum_os_version = "",
+    launch_storyboard = "HelloWorld/Base.lproj/LaunchScreen.storyboard",
+    minimum_os_version = "13.2",
     deps = [":SwiftLib"],
 )
