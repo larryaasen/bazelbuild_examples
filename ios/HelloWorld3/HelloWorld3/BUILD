@@ -16,7 +16,6 @@ swift_library(
 
 swift_library(
     name = "Controllers",
-    # module_name = "Controllers",
     srcs = [
         "Controller.swift"
     ],
@@ -34,6 +33,5 @@ ios_application(
     infoplists = ["Info.plist"],
     launch_storyboard = "Base.lproj/LaunchScreen.storyboard",
     minimum_os_version = "13.2",
-    # deps = ["//HelloWorld3/Controllers:Controllers", ":SwiftLib"],
     deps = [":Controllers", ":SwiftLib"],
 )

@@ -28,10 +28,22 @@ the app on the simulator, run this command from the Terminal:
 The [HelloWorld2](ios/HelloWorld2) iOS example is the same as the
 [HelloWorld](#HelloWorld) example, but with a BUILD file in the subfolder HelloWorld2.
 
-To build the HelloWorld app in Bazel, install it on the simulator, and then run
+To build the HelloWorld2 app in Bazel, install it on the simulator, and then run
 the app on the simulator, run this command from the Terminal:
 
     $ cd ios/HelloWorld2
+    $ make -f Makefile.bazel build_app
+
+## HelloWorld3
+
+The [HelloWorld3](ios/HelloWorld3) iOS example is the same as the
+[HelloWorld2](#HelloWorld2) example, but with a second swift_library containing
+one new Swift file.
+
+To build the HelloWorld3 app in Bazel, install it on the simulator, and then run
+the app on the simulator, run this command from the Terminal:
+
+    $ cd ios/HelloWorld3
     $ make -f Makefile.bazel build_app
 
 ## Bazel Commands
