@@ -1,0 +1,10 @@
+{
+  "optionSet" : {
+    "BazelPath" : {
+      "p" : "/usr/local/Cellar/bazel/2.0.0/bin/bazel"
+    },
+    "WorkspaceRootPath" : {
+      "p" : "/Users/larry/Projects/bazelbuild_examples/ios/HelloWorld3"
+    }
+  }
+}

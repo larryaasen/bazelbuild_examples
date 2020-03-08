@@ -65,6 +65,49 @@ To build, install, and launch the app all at once:
 
     $ make -f Makefile.bazel run
 
+After installing Tulsi and configuring the project, you can create the Xcode
+project file from the command line. It will also launch Xcode.
+
+    $ make -f Makefile.bazel generate_xcode_project
+
+## Installing Tulsi
+
+Installing [Tulsi](http://tulsi.bazel.io/) with Bazel 2.0.0 requires a few modifications to the installation script.
+The script [build_and_run.sh](https://github.com/bazelbuild/tulsi) is used to build the Tulsi app and is setup to use Xcode 11.2.1 as of 3/8/2020.
+
+To build Tulsi with Xcode 11.3.1 you need to make two changes:
+
+* Open the [.bazelrc](https://github.com/bazelbuild/tulsi/blob/master/.bazelrc) file and
+find this on line 3: `build --xcode_version=11.2.1`.
+Change 11.2.1 to 11.3.1 and save the file.
+
+* Open the WORKSPACE file and find this on line 3: `git_repository(`. Replace the
+entire git_repository function with this one:
+```
+git_repository(
+    name = "build_bazel_rules_apple",
+    remote = "https://github.com/bazelbuild/rules_apple.git",
+    tag = "0.19.0",
+)
+```
+
+Run the build script:
+
+    $ ./build_and_run.sh
+
+If the build succeeded, you should see this:
+```
+Target //:tulsi up-to-date:
+  bazel-bin/tulsi.zip
+INFO: Elapsed time: 35.487s, Critical Path: 29.57s
+INFO: 43 processes: 28 darwin-sandbox, 15 local.
+INFO: Build completed successfully, 82 total actions
+```
+
+The Tulsi app is automatically launched:
+
+![Tulsi App](resources/tulsi_build.png)
+
 ## Contributing
 All [comments](https://github.com/larryaasen/bazelbuild_examples/issues) and [pull requests](https://github.com/larryaasen/bazelbuild_examples/pulls) are welcome.
 

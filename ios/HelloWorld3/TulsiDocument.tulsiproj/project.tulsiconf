@@ -1,0 +1,12 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+
+    }
+  },
+  "packages" : [
+    "HelloWorld3"
+  ],
+  "projectName" : "HelloWorld3",
+  "workspaceRoot" : ".."
+}

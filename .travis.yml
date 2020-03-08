@@ -11,7 +11,14 @@ script:
   - cd ios/HelloWorld
   - bazel version
   - make -f Makefile.bazel build_app
+  - ls -al bazel-bin/HelloWorld_archive-root/Payload/HelloWorld.app
 
   - cd ../HelloWorld2
   - bazel version
   - make -f Makefile.bazel build_app
+  - ls -al bazel-bin/HelloWorld2_archive-root/Payload/HelloWorld2.app
+
+  - cd ../HelloWorld3
+  - bazel version
+  - make -f Makefile.bazel build_app
+  - ls -al bazel-bin/HelloWorld3/HelloWorld3_archive-root/Payload/HelloWorld3.app
