@@ -38,7 +38,7 @@ the app on the simulator, run this command from the Terminal:
 
 The [HelloWorld3](ios/HelloWorld3) iOS example is the same as the
 [HelloWorld2](#HelloWorld2) example, but with a second swift_library containing
-one new Swift file.
+one new Swift file, where SwiftLib depends on library Controllers.
 
 To build the HelloWorld3 app in Bazel, install it on the simulator, and then run
 the app on the simulator, run this command from the Terminal:

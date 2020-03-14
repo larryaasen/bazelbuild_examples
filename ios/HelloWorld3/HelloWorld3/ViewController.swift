@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Controllers
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let text = message.text {
+            message.text = Controller.replaceMessage(message: text)
+        }
     }
 
 }

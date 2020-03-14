@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Controller {
+public class Controller {
 
-    static func replaceMessage(message: String) -> String {
-        return "#{message} By3"
+    static public func replaceMessage(message: String) -> String {
+        return "\(message) By3"
     }
 
 }
